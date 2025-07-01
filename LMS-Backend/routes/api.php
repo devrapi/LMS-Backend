@@ -1,9 +1,12 @@
 <?php
 
 use App\Http\Controllers\Api\AdminController;
+use App\Http\Controllers\Api\CategoriesController;
+use App\Http\Controllers\Api\DivisionController;
 use App\Models\Admin;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use phpDocumentor\Reflection\Types\Resource_;
 
 Route::get('/user', function (Request $request) {
     return $request->user();
@@ -19,3 +22,10 @@ Route::get('ping', function () {
 //Open Routes
 Route::post('register', [AdminController::class , 'register']);
 Route::post('login', [AdminController::class , 'login']);
+
+//categories
+Route::apiResource('/categories' , CategoriesController::class);
+
+//division
+Route::apiResource('/division' , DivisionController::class);
+
