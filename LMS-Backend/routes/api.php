@@ -3,6 +3,7 @@
 use App\Http\Controllers\Api\AdminController;
 use App\Http\Controllers\Api\CategoriesController;
 use App\Http\Controllers\Api\DivisionController;
+use App\Http\Controllers\Api\TeamController;
 use App\Models\Admin;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -28,4 +29,7 @@ Route::apiResource('/categories' , CategoriesController::class);
 
 //division
 Route::apiResource('/division' , DivisionController::class);
+
+//teams
+Route::apiResource('/teams' , TeamController::class);
 

@@ -15,7 +15,7 @@ class Division extends Model
 
     public function teams()
     {
-        // return $this->hasMany(Team::class);
+        return $this->hasMany(Teams::class);
     }
 
     public function schedules()
